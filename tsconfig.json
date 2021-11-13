@@ -2,6 +2,16 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@agencycoda/mia-category-core": [
+        "dist/agencycoda/mia-category-core/agencycoda-mia-category-core",
+        "dist/agencycoda/mia-category-core"
+      ],
+      "@agencycoda/mia-category-editor": [
+        "dist/agencycoda/mia-category-editor/agencycoda-mia-category-editor",
+        "dist/agencycoda/mia-category-editor"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
