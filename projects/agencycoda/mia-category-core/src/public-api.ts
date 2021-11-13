@@ -2,6 +2,15 @@
  * Public API Surface of mia-category-core
  */
 
-export * from './lib/mia-category-core.service';
-export * from './lib/mia-category-core.component';
+/*
+ * Entities
+ */
+export * from './lib/entities/mia_category';
+/*
+ * Services
+ */
+export * from './lib/services/mia_category.service';
+/*
+ * Modules
+ */
 export * from './lib/mia-category-core.module';
