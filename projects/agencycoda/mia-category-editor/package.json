@@ -1,9 +1,10 @@
 {
   "name": "@agencycoda/mia-category-editor",
-  "version": "0.0.1",
+  "version": "13.1.0",
   "peerDependencies": {
-    "@angular/common": "^12.2.0",
-    "@angular/core": "^12.2.0"
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0",
+    "@agencycoda/mia-form": "^13.1.17"
   },
   "dependencies": {
     "tslib": "^2.3.0"
