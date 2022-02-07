@@ -7,6 +7,11 @@
  */
  export * from './lib/modals/mia-category.modal.service';
 
+ /**
+ * Modals
+ */
+  export * from './lib/modals/organize-category-modal/organize-category-modal.component';
+
 /**
  * Module
  */

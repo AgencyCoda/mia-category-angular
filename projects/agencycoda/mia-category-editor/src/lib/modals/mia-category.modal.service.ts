@@ -3,6 +3,8 @@ import { MiaQuery } from '@agencycoda/mia-core';
 import { MiaField, MiaFormConfig, MiaFormModalComponent, MiaFormModalConfig } from '@agencycoda/mia-form';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { MiaOrganizeCategoryModalConfig, MiaOrganizeCategoryModalInteraction, OrganizeCategoryModalComponent } from './organize-category-modal/organize-category-modal.component';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +41,22 @@ export class MiaCategoryModalService {
 
   openWithType(category: MiaCategory, type: number) {
     category.type = type;
-    this.open(category);
+    return this.open(category);
+  }
+
+  openOrganize(typeOfCategory: number): OrganizeCategoryModalComponent {
+    let config = new MiaOrganizeCategoryModalConfig();
+    config.idCategoryDefault = typeOfCategory;
+    return this.openOrganizeWithConfig(config);
+  }
+
+  openOrganizeWithConfig(config: MiaOrganizeCategoryModalConfig): OrganizeCategoryModalComponent {
+    let dailogRef = this.dialog.open(OrganizeCategoryModalComponent, {
+      width: '520px',
+      panelClass: 'modal-full-width-mobile',
+      data: config
+    });
+
+    return dailogRef.componentInstance;
   }
 }
